@@ -70,10 +70,10 @@
             key-positions = <3 4>;
             bindings = <&kp UNDER>;
         };
-        combo_clck {
+        combo_hash {
             timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp CLCK>;
+            key-positions = <15 16>;
+            bindings = <&kp HASH>;
         };
         combo_plus {
             timeout-ms = <50>;
@@ -105,7 +105,21 @@
             key-positions = <33 34>;
             bindings = <&kp PRCNT>;
         };
- 
+        combo_qmark {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp QMARK>;
+        };
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp AT>;
+        };
+        combo_caret {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp CARET>;
+        };
     };
 
     conditional_layers {
@@ -130,19 +144,19 @@
         };
         lower_layer {
             bindings = <
-                &kp EXCL         &kp AT     &kp HASH     &kp DLLR       &kp KP_PLUS           &kp LBRC    &kp RBRC    &kp N7     &kp N8      &kp N9    &kp F1    &kp F9          
-                &mt LCTRL PLUS   &kp LT    &kp CARET     &kp AMPS       &kp KP_MINUS          &kp LBKT    &kp RBKT    &kp N4     &kp N5      &kp N6    &kp F5    &kp F10 
-                &mt LGUI EQUAL   &kp GT   &mt LALT TILDE &mt LCTRL PIPE &mt LSHFT KP_MULTIPLY &kp LPAR    &kp RPAR    &kp N1     &kp N2      &kp N3    &kp F7    &kp F11
+                &kp EXCL         &kp AT     &kp HASH     &kp DLLR       &kp KP_PLUS           &kp LBRC    &kp RBRC    &kp N7       &kp N8      &kp N9    &kp F1    &kp F9          
+                &mt LCTRL PLUS   &kp LT    &kp CARET     &kp AMPS       &kp KP_MINUS          &kp LBKT    &kp RBKT    &kp N4       &kp N5      &kp N6    &kp F5    &kp F10 
+                &mt LGUI EQUAL   &kp GT   &mt LALT TILDE &mt LCTRL PIPE &mt LSHFT KP_MULTIPLY &kp LPAR  &mt RSHFTRPAR &mt RCTRL N1 &mt RALT N2 &kp N3    &kp F7    &kp F11
                                                      &trans        &trans          &trans      &trans      &kp N0     &kp F12
             >;
         };
 
         raise_layer {
             bindings = <
-                &mt LGUI KP_NUM   &kp KP_SLASH      &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS   &kp C_VOL_UP   &kp HOME   &kp PSCRN   &kp PG_UP   &kp SLCK          &kp CLCK   
-                &mt LCTRL EQUAL   &kp KP_MULTIPLY   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS    &kp C_MUTE     &kp LEFT   &kp UP      &kp RIGHT   &kp INS           &mt RCTRL  K_APP
-                &kp LALT          &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_DOT     &kp C_VOL_DN   &kp END    &kp DOWN    &kp PG_DN   &kp PAUSE_BREAK   &kp RALT
-                                                                &trans      &trans      &trans         &trans         &trans     &trans
+                &mt LGUI KP_NUM   &kp KP_SLASH      &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_MINUS   &kp C_VOL_UP   &kp HOME      &kp PSCRN      &kp PG_UP   &kp SLCK          &kp CLCK   
+                &mt LCTRL EQUAL   &kp KP_MULTIPLY   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS    &kp C_MUTE     &kp LEFT      &kp UP         &kp RIGHT   &kp INS           &mt RCTRL  K_APP
+                &kp LALT          &kp KP_N0      &mt LALT KP_N1 &mt LCTRL KP_N2 &mt LSHFT KP_N3 &kp KP_DOT     &kp C_VOL_DN   &mt RSHFT END &mt RCTRL DOWN &mt RALT PG_DN   &kp PAUSE_BREAK   &kp RALT
+                                                                &trans      &trans      &trans         &trans         &trans     &kp QMARK
             >;
         };
         adjust_layer {
