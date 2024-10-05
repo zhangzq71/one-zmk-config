@@ -111,13 +111,23 @@
         };
         combo_caret {
             timeout-ms = <50>;
-            key-positions = <33 34>;
+            key-positions = <22 23>;
             bindings = <&kp CARET>;
         };
         combo_qmark {
             timeout-ms = <50>;
             key-positions = <34 35>;
             bindings = <&kp QMARK>;
+        };
+        combo_ctrlc {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp LC(C)>;
+        };
+        combo_ctrlv {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp LC(V)>;
         };
     };
 
